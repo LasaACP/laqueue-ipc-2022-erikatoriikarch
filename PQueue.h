@@ -1,3 +1,5 @@
+// EDIT THIS FOR BASIC CREDIT
+
 /*
  * LaQueue
  * 
@@ -10,9 +12,12 @@
  * 
  * */
 
+// added = end of list
+// removed = head of list
+
 struct node
 {
-	int priority;
+	int priority; //lower number = higher priority
 	void* data;
 	struct node *link;
 };

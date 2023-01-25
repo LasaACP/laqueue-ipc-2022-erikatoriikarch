@@ -1,3 +1,5 @@
+//EDIT THIS FOR BASIC CREDIT
+
 /*
  * LaQueue
  * 
@@ -21,6 +23,7 @@
 /*
  * Class Priority Queue
  */
+class pQueue {
 
 		
 /*
@@ -39,7 +42,7 @@ void* PQueue::top()
 	/* Your code here */
 }
 /*
- * Delete from Priority Queue
+* Delete from Priority Queue
  */
 void PQueue::pop()
 {
@@ -58,4 +61,4 @@ void PQueue::display()
 	std::cout<<ptr->priority<<" "<<(char*)ptr->data<<std::endl;
 
 }
-	
+}
