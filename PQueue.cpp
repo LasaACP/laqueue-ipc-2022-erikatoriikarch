@@ -80,3 +80,6 @@ void PQueue::display()
         }*/
     std::cout << "disp" << std::endl;
 }
+
+//dude wtf just push
+//GHJDSGJHIOL
