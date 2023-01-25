@@ -32,10 +32,10 @@
 */
 void PQueue::push(void *item, int priority)
 {
-	/*node* temp = new node();
+	node* temp = new node();
     temp->data = item;
     temp->priority = priority;
-    if (front->data == nullptr)
+    if (front == nullptr)
         front = temp;
     else {
         node* current = front;
@@ -43,8 +43,8 @@ void PQueue::push(void *item, int priority)
             current = current->next;
         temp->next = current->next;
         current->next = temp;
-    }*/
-    std::cout << "push" << std::endl;
+    }
+    //std::cout << "push" << std::endl;
 }
 
 /*
@@ -52,10 +52,10 @@ void PQueue::push(void *item, int priority)
  */
 void* PQueue::top()
 {
-    //return front->data;
-    /*void* swag;
-    std::cout << "top" << std::endl;
-    return swag;*/
+    //std::cout << "top" << std::endl;
+    if(front == nullptr)
+        return front;
+    return front->data;
 }
 
 void PQueue::pop()
