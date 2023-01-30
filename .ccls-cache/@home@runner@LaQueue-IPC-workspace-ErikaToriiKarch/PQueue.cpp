@@ -30,11 +30,11 @@
 /*
 * Insert into Priority Queue
 */
-void PQueue::push(void *item, int priority)
+void PQueue::push(void *item, int p)
 {
 	node* temp = new node();
     temp->data = item;
-    temp->priority = priority;
+    temp->priority = p;
     if (front == nullptr)
         front = temp;
     else {

@@ -36,7 +36,7 @@ class PQueue
 		front = nullptr;
 	}
 		
-	void push(void *item, int priority);
+	void push(void *item, int p);
 	void* top();
 	void pop();
 	void display();
