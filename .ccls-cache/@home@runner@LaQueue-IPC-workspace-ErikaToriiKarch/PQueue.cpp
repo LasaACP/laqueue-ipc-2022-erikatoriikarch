@@ -61,13 +61,14 @@ void* PQueue::top()
 void PQueue::pop()
 {
     if(front != nullptr) {
-        if(front->next != nullptr) {
+        /*if(front->next != nullptr) {
         	node* temp = front->next->next;
             front->priority = front->next->priority;
             front->data = front->next->data;
             front->next = temp;
         }
-        front = nullptr;
+        front = nullptr;*/
+        front = front->next;
     }        
 }
 
