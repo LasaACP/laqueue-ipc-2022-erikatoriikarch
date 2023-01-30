@@ -60,11 +60,15 @@ void* PQueue::top()
 
 void PQueue::pop()
 {
-	/*node* temp = front->next->next;
-    front->priority = front->next->priority;
-    front->data = front->next->data;
-    front->next = temp;*/
-    std::cout << "pop" << std::endl;
+    if(front != nullptr) {
+        if(front->next != nullptr) {
+        	node* temp = front->next->next;
+            front->priority = front->next->priority;
+            front->data = front->next->data;
+            front->next = temp;
+        }
+        front = nullptr;
+    }        
 }
 
 /*
@@ -72,12 +76,11 @@ void PQueue::pop()
  */
 void PQueue::display()
 {
-
-	/*node* ptr = front;
+	node* ptr = front;
     while (ptr->next != nullptr) {
 	std::cout<<ptr->priority<<" "<<(char*)ptr->data<<std::endl;
         ptr = ptr->next;
-        }*/
+        }
     std::cout << "disp" << std::endl;
 }
 
