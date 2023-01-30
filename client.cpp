@@ -87,8 +87,6 @@ void *client_main (void *threadarg)
 	clock_t c = clock();
 	while(double(clock()-c)/CLOCKS_PER_SEC < TimeToRunInSecs)
 	{
-
-
 		usleep(200);
 		
 		// Generate a series of buffers that contain lowercase letters

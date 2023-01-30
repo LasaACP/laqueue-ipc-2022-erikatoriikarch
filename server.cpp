@@ -72,22 +72,22 @@ void *server_main (void *threadarg)
 	//char *pt_buffer;
 
 	std::cout << "Sever message queue open."  << std::endl;
-    std::cout << "test0" << std::endl;
+    // std::cout << "test0" << std::endl;
 
 	double TimeToRunInSecs = 0.5;
 	clock_t c = clock();
 	while(double(clock()-c)/CLOCKS_PER_SEC < TimeToRunInSecs)
 	{
-        std::cout << "test0.2" << std::endl;
+        //std::cout << "test0.2" << std::endl;
 		
 		usleep(1000);			// put a little load on the system so our queue code can process things
 		
         // get the oldest message with highest priority
-            std::cout << "test0.5" << std::endl;
+            //std::cout << "test0.5" << std::endl;
         if ((outLen = lq_receive (qd_server, in_buffer, MSG_BUFFER_SIZE, NULL)) == -1) {
             perror ("Server: lq_receive");
         }
-        std::cout << "test1" << std::endl;
+        //std::cout << "test1" << std::endl;
 		//If there was data then process it.
 		if (outLen > 0)
 		{
@@ -114,7 +114,7 @@ void *server_main (void *threadarg)
 				perror ("Server: Not able to send message to client");
 				continue;
 			}
-                std::cout << "test2" << std::endl;
+                //std::cout << "test2" << std::endl;
 
 			
 		}
